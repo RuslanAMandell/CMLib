@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(CMLib C)
 
-# Add the include directory for public headers
+# Add include directory
 include_directories(include)
 
 # Specify the source files for the library
@@ -24,9 +24,11 @@ target_link_libraries(CMLib_shared m)
 set_target_properties(CMLib_static PROPERTIES OUTPUT_NAME "CMLib")
 set_target_properties(CMLib_shared PROPERTIES OUTPUT_NAME "CMLib" VERSION 1.0 SOVERSION 1)
 
-# Install rules for headers and libraries
+# Install rules for libraries
 install(TARGETS CMLib_static CMLib_shared
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
 )
+
+# Install headers
 install(DIRECTORY include/ DESTINATION include)
