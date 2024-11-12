@@ -1,4 +1,4 @@
-# Machine Learning Library in C
+# CMLib - "C Machine Learning Library"
 
 A lightweight machine learning library implemented in C, designed for educational purposes and embedded systems. This library includes simple implementations of linear regression and logistic regression.
 
