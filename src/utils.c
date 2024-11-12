@@ -27,7 +27,7 @@ void display_progress_bar(int current, int total) {
     printf("\r[Elapsed Time: %02d:%02d:%02d] [", hours, minutes, seconds);
     for (int i = 0; i < bar_width; ++i) {
         if (i < pos) {
-            printf("=");
+            printf("█");
         } else {
             printf(" ");
         }
