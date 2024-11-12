@@ -1,5 +1,7 @@
 #include <math.h>
+#include <stdio.h>
 #include "../include/ml_algorithms.h"
+#include "../include/utils.h"
 
 // Sigmoid function
 float sigmoid(float z) {
@@ -28,7 +30,9 @@ void train_linear_regression(Matrix *X, Vector *y, Vector *weights, float learni
             }
             weights->data[j] -= learning_rate * gradient / m;
         }
-    }
+        display_progress_bar(epoch + 1, epochs);
+        }
+    //printf("\n"); // Move to a new line after progress bar is complete
 }
 
 // Make predictions using trained weights
@@ -62,7 +66,10 @@ void train_logistic_regression(Matrix *X, Vector *y, Vector *weights, float lear
             }
             weights->data[j] -= learning_rate * gradient / m;
         }
+        // Update progress bar
+        display_progress_bar(epoch + 1, epochs);
     }
+    //printf("\n"); // Move to a new line after progress bar is complete
 }
 
 // Make predictions using trained weights
@@ -85,6 +92,9 @@ float calculate_accuracy(Matrix *X, Vector *y, Vector *weights) {
         if (predicted_class == (int)y->data[i]) {
             correct++;
         }
+        // Update progress bar
+        display_progress_bar(i + 1, X->rows);
     }
+    //printf("\n");
     return (float)correct / X->rows;
 }

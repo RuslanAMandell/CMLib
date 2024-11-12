@@ -10,6 +10,7 @@ set(SOURCES
 		src/vector.c
 		src/matrix.c
   		src/ml_algorithms.c
+		src/utils.c
 )
 
 # Create the executable
