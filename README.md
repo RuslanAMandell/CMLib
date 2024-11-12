@@ -46,11 +46,11 @@ A lightweight machine learning library implemented in C, designed for educationa
   Header files in /usr/local/include
   Libraries in /usr/local/lib
 
-### Usage
+## Usage
 
 Once installed, you can include and link the library in your own C projects.
 
-## Including the Library
+### Including the Library
 
 In your C code, include the main header file ml_library.h (or your chosen name if different):
 
@@ -58,7 +58,7 @@ In your C code, include the main header file ml_library.h (or your chosen name i
    #include <ml_library.h>
    ```
 
-## Compiling Your Code with the Library
+### Compiling Your Code with the Library
 
 If the library is installed, compile your program by linking with -lml_library:
 
@@ -72,7 +72,7 @@ If you’re not installing the library system-wide, provide paths to the include
    gcc my_program.c -I/path/to/Machine-Learning-Library-C/include -L/path/to/Machine-Learning-Library-C/build -lml_library -o my_program
 ```
 
-### Examples
+## Examples
 
 Check the examples/ directory for example programs demonstrating how to use the library.
 
@@ -84,10 +84,10 @@ To compile an example, navigate to the examples directory and use the following 
   ./example
 ```
 
-### Documentation
+## Documentation
 
 Each function is documented within the header files in the include directory. You can refer to these files for details on how to use specific functions and structures.
 
-### License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details
