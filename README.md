@@ -23,8 +23,8 @@ A lightweight machine learning library implemented in C, designed for educationa
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/RuslanAMandell/Machine-Learning-Library-C.git
-   cd Machine-Learning-Library-C
+   git clone https://github.com/RuslanAMandell/CMLib.git
+   cd CMLib
 
 2. Build the Library (using CMake):
    
@@ -52,24 +52,24 @@ Once installed, you can include and link the library in your own C projects.
 
 ### Including the Library
 
-In your C code, include the main header file ml_library.h (or your chosen name if different):
+In your C code, include the main header file CMLib.h (or your chosen name if different):
 
  ```bash
-   #include <ml_library.h>
+   #include <CMLib.h>
    ```
 
 ### Compiling Your Code with the Library
 
-If the library is installed, compile your program by linking with -lml_library:
+If the library is installed, compile your program by linking with -lCMLib:
 
 ```bash
-   gcc my_program.c -lml_library -o my_program
+   gcc my_program.c -lCMLib -o my_program
 ```
 
 If you’re not installing the library system-wide, provide paths to the include directory and library manually:
 
 ```bash
-   gcc my_program.c -I/path/to/Machine-Learning-Library-C/include -L/path/to/Machine-Learning-Library-C/build -lml_library -o my_program
+   gcc my_program.c -I/path/to/CMLib/include -L/path/to/CMLib/build -lCMLib -o my_program
 ```
 
 ## Examples
@@ -80,7 +80,7 @@ To compile an example, navigate to the examples directory and use the following 
 
 ```bash
   cd examples
-  gcc main.c -I../include -L../build -lmy_ml_library -o example
+  gcc main.c -I../include -L../build -lCMLib_ -o example
   ./example
 ```
 
