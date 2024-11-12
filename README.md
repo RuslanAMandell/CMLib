@@ -46,6 +46,15 @@ A lightweight machine learning library implemented in C, designed for educationa
   Header files in /usr/local/include
   Libraries in /usr/local/lib
 
+## Permanent Installation (System-Wide)
+
+If you have `sudo` privileges, you can make CMLib available system-wide by copying the library to `/usr/local/lib` and updating the linker cache.
+
+1. Copy the library to a system-wide directory:
+
+   ```bash
+   sudo cp build /usr/local/lib/
+
 ## Usage
 
 Once installed, you can include and link the library in your own C projects.
