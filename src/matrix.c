@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "../include/matrix.h"
 
+
 Matrix* create_matrix(int rows, int cols) {
     Matrix *m = (Matrix*)malloc(sizeof(Matrix));
     m->data = (float*)malloc(rows * cols * sizeof(float));

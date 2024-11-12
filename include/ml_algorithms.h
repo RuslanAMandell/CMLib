@@ -10,7 +10,6 @@ void train_linear_regression(Matrix *X, Vector *y, Vector *weights, float learni
 // Function to make predictions using trained weights
 float predict_linear_regression(Matrix *X, Vector *weights, int row);
 
-
 // Function to train logistic regression
 void train_logistic_regression(Matrix *X, Vector *y, Vector *weights, float learning_rate, int epochs);
 
