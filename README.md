@@ -84,6 +84,15 @@ To compile an example, navigate to the examples directory and use the following 
   ./example
 ```
 
+## Data Handling
+
+CMLib is designed to focus on core machine learning algorithms, leaving data parsing up to the user. Here are some recommendations for loading data:
+
+- **CSV**: Use `libcsv` or write a simple CSV parser to read data from CSV files.
+- **JSON**: Use `cJSON` to load data from JSON files.
+
+After parsing, convert the data into an array or matrix format compatible with CMLib’s functions.
+
 ## Documentation
 
 Each function is documented within the header files in the include directory. You can refer to these files for details on how to use specific functions and structures.
