@@ -1,5 +1,7 @@
 // src/utils.c
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include "../include/utils.h"
 
@@ -35,3 +37,4 @@ void display_progress_bar(int current, int total) {
     printf("] %3d%%   ", (int)(progress * 100)); // Extra spaces for padding
     fflush(stdout); // Ensure output is displayed immediately
 }
+

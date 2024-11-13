@@ -1,9 +1,7 @@
 // main.c
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/vector.h"
-#include "../include/matrix.h"
-#include "../include/ml_algorithms.h"
+#include "../include/CMLib.h"
 
 int main() {
     // Example data for a simple linear regression model
