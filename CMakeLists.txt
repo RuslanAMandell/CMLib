@@ -1,20 +1,34 @@
 cmake_minimum_required(VERSION 3.10)
-project(Machine_Learning_Library_C C)
+project(CMLib C)
 
 # Add include directory
 include_directories(include)
 
-# Add the source files
+# Specify the source files for the library
 set(SOURCES
-    examples/main.c
     src/vector.c
     src/matrix.c
     src/ml_algorithms.c
     src/utils.c
 )
 
-# Create the executable
-add_executable(main ${SOURCES})
+# Create the static and shared libraries
+add_library(CMLib_static STATIC ${SOURCES})
+add_library(CMLib_shared SHARED ${SOURCES})
 
-# Link the math library
-target_link_libraries(main m)
+# Link math library if needed
+target_link_libraries(CMLib_static m)
+target_link_libraries(CMLib_shared m)
+
+# Set the output names for the libraries
+set_target_properties(CMLib_static PROPERTIES OUTPUT_NAME "CMLib")
+set_target_properties(CMLib_shared PROPERTIES OUTPUT_NAME "CMLib" VERSION 1.0 SOVERSION 1)
+
+# Install rules for libraries
+install(TARGETS CMLib_static CMLib_shared
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+)
+
+# Install headers
+install(DIRECTORY include/ DESTINATION include)
