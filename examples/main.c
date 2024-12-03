@@ -42,7 +42,7 @@ int main() {
     }
 
     float prediction = predict_linear_regression(new_data_matrix, weights, 0);
-    printf("\nPrediction for new data point [4.0, 5.0]: %f\n", prediction);
+    printf("\nPrediction for new data point [%f, %f]: %f\n",new_data[0],new_data[1], prediction);
 
     // Free allocated memory
     free_matrix(X);
